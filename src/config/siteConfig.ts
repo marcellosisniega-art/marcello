@@ -38,7 +38,8 @@ export const authority = [
 
 export const problem = {
   title: "¿Por qué lo necesitas?",
-  body: "Necesita una sacudida inteligente: una forma clara de pensar, decidir y actuar cuando el mercado, la tecnología y las personas ya cambiaron.",
+  body: "Necesitas una sacudida inteligente: una forma clara de pensar, decidir y actuar cuando el mercado, la tecnología y las personas ya cambiaron.",
+  painsLabel: "Diseñado para:",
   pains: [
     "Equipos que hablan de innovación, pero siguen trabajando igual.",
     "Ideas que mueren antes de convertirse en prototipos.",

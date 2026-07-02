@@ -16,7 +16,13 @@ export default function ProblemSection() {
           </p>
         </Reveal>
 
-        <div className="mt-16 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
+        <Reveal delay={0.16}>
+          <p className="mt-16 text-xs font-medium tracking-[0.3em] text-gold uppercase">
+            {problem.painsLabel}
+          </p>
+        </Reveal>
+
+        <div className="mt-6 grid gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
           {problem.pains.map((pain, i) => (
             <Reveal key={pain} delay={0.05 * i}>
               <div className="group flex h-full flex-col justify-between gap-8 bg-ink-soft p-8 transition-colors duration-300 hover:bg-surface">

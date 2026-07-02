@@ -43,6 +43,7 @@ export default function MagneticButton({
       href={href}
       target={target}
       rel={rel}
+      data-cursor-hover="true"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       animate={{ x: offset.x, y: offset.y }}

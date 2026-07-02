@@ -24,6 +24,7 @@ export default function StickyCTA() {
             href={contact.whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
+            data-cursor-hover="true"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 16 }}

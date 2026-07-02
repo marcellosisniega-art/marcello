@@ -1,4 +1,5 @@
 import Reveal from "@/components/ui/Reveal";
+import CountUp from "@/components/ui/CountUp";
 import { problem } from "@/config/siteConfig";
 
 export default function ProblemSection() {
@@ -26,9 +27,11 @@ export default function ProblemSection() {
           {problem.pains.map((pain, i) => (
             <Reveal key={pain} delay={0.05 * i}>
               <div className="group flex h-full flex-col justify-between gap-8 bg-ink-soft p-8 transition-colors duration-300 hover:bg-surface">
-                <span className="font-display text-5xl text-gold/40 transition-colors duration-300 group-hover:text-gold">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
+                <CountUp
+                  target={i + 1}
+                  delay={0.1 + 0.05 * i}
+                  className="font-display text-5xl text-gold/40 transition-colors duration-300 group-hover:text-gold"
+                />
                 <p className="text-lg leading-snug text-paper">{pain}</p>
               </div>
             </Reveal>

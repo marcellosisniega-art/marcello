@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useReducedMotion, type Variants } from "framer-motion";
 import MagneticButton from "@/components/ui/MagneticButton";
+import SplitText from "@/components/ui/SplitText";
 import { hero, contact } from "@/config/siteConfig";
 
 export default function Hero() {
@@ -27,18 +28,16 @@ export default function Hero() {
   );
   const contentOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
 
-  const container: Variants = {
-    hidden: {},
-    visible: {
-      transition: { staggerChildren: 0.12, delayChildren: 0.15 },
-    },
-  };
-
   const item: Variants = {
-    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : 32 },
+    hidden: {
+      opacity: 0,
+      y: prefersReducedMotion ? 0 : 32,
+      filter: prefersReducedMotion ? "blur(0px)" : "blur(12px)",
+    },
     visible: {
       opacity: 1,
       y: 0,
+      filter: "blur(0px)",
       transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
     },
   };
@@ -48,8 +47,14 @@ export default function Hero() {
       ref={sectionRef}
       className="relative flex min-h-[100svh] w-full items-end overflow-hidden bg-ink"
     >
-      {/* Background image with parallax */}
-      <motion.div className="absolute inset-0" style={{ y: imageY }}>
+      {/* Background image with parallax + cinematic zoom-out on load */}
+      <motion.div
+        className="absolute inset-0"
+        style={{ y: imageY }}
+        initial={{ scale: prefersReducedMotion ? 1 : 1.08 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.8, ease: [0.16, 1, 0.3, 1] }}
+      >
         <Image
           src={hero.image.src}
           alt={hero.image.alt}
@@ -70,47 +75,53 @@ export default function Hero() {
         style={{ y: contentY, opacity: contentOpacity }}
         className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 pt-40 sm:px-10 sm:pb-28 lg:px-16"
       >
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="visible"
-          className="max-w-3xl"
-        >
-          <motion.p
-            variants={item}
+        <div className="max-w-3xl">
+          <SplitText
+            text={hero.eyebrow}
+            as="div"
+            splitBy="word"
+            delay={0.15}
             className="mb-6 text-xs font-medium tracking-[0.3em] text-gold uppercase"
-          >
-            {hero.eyebrow}
-          </motion.p>
+          />
 
           <h1 className="font-display text-[16vw] leading-[0.92] font-medium tracking-tight text-paper sm:text-[9vw] lg:text-[7.5vw]">
-            <motion.span variants={item} className="block">
-              {hero.headline[0]}
-            </motion.span>
-            <motion.span
-              variants={item}
+            <SplitText
+              text={hero.headline[0]}
+              as="div"
+              splitBy="char"
+              delay={0.4}
+              className="block"
+            />
+            <SplitText
+              text={hero.headline[1]}
+              as="div"
+              splitBy="char"
+              delay={0.75}
               className="block italic text-transparent [-webkit-text-stroke:1.5px_var(--paper)] sm:[-webkit-text-stroke:2px_var(--paper)]"
-            >
-              {hero.headline[1]}
-            </motion.span>
+            />
           </h1>
 
-          <motion.p
-            variants={item}
+          <SplitText
+            text={hero.name}
+            as="div"
+            splitBy="word"
+            delay={1.05}
             className="mt-5 text-sm font-medium tracking-[0.25em] text-gold uppercase"
-          >
-            {hero.name}
-          </motion.p>
+          />
 
-          <motion.p
-            variants={item}
+          <SplitText
+            text={hero.subheadline}
+            as="div"
+            splitBy="word"
+            delay={1.2}
             className="mt-6 max-w-xl text-xl font-medium text-paper sm:text-2xl"
-          >
-            {hero.subheadline}
-          </motion.p>
+          />
 
           <motion.div
             variants={item}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.9, delay: 1.5, ease: [0.16, 1, 0.3, 1] }}
             className="mt-10 flex flex-wrap items-center gap-4"
           >
             <MagneticButton href={contact.whatsappHref} target="_blank" rel="noopener noreferrer">
@@ -120,14 +131,14 @@ export default function Hero() {
               {hero.secondaryCta}
             </MagneticButton>
           </motion.div>
-        </motion.div>
+        </div>
       </motion.div>
 
       {/* Scroll cue */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 0.8 }}
+        transition={{ delay: 1.9, duration: 0.8 }}
         className="absolute bottom-8 right-6 z-10 hidden items-center gap-3 sm:right-10 lg:right-16 md:flex"
       >
         <span className="text-xs tracking-[0.25em] text-muted uppercase [writing-mode:vertical-rl]">

@@ -21,10 +21,15 @@ export default function Reveal({
   const prefersReducedMotion = useReducedMotion();
 
   const variants: Variants = {
-    hidden: { opacity: 0, y: prefersReducedMotion ? 0 : y },
+    hidden: {
+      opacity: 0,
+      y: prefersReducedMotion ? 0 : y,
+      filter: prefersReducedMotion ? "blur(0px)" : "blur(8px)",
+    },
     visible: {
       opacity: 1,
       y: 0,
+      filter: "blur(0px)",
       transition: { duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] },
     },
   };

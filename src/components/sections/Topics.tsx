@@ -2,14 +2,16 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import Reveal from "@/components/ui/Reveal";
+import ParticleField from "@/components/ui/ParticleField";
 import { topics, topicsIntro } from "@/config/siteConfig";
 
 export default function Topics() {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section id="temas" className="relative scroll-mt-24 bg-ink px-6 py-28 sm:px-10 sm:py-36 lg:px-16">
-      <div className="mx-auto max-w-6xl">
+    <section id="temas" className="relative scroll-mt-24 overflow-hidden bg-ink px-6 py-28 sm:px-10 sm:py-36 lg:px-16">
+      <ParticleField density={12} />
+      <div className="relative z-10 mx-auto max-w-6xl">
         <Reveal>
           <p className="text-xs font-medium tracking-[0.3em] text-gold uppercase">
             {topicsIntro.eyebrow}

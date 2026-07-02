@@ -1,10 +1,12 @@
 import Reveal from "@/components/ui/Reveal";
+import ParticleField from "@/components/ui/ParticleField";
 import { problem } from "@/config/siteConfig";
 
 export default function ProblemSection() {
   return (
-    <section className="relative bg-ink px-6 py-28 sm:px-10 sm:py-36 lg:px-16">
-      <div className="mx-auto max-w-6xl">
+    <section className="relative overflow-hidden bg-ink px-6 py-28 sm:px-10 sm:py-36 lg:px-16">
+      <ParticleField density={12} />
+      <div className="relative z-10 mx-auto max-w-6xl">
         <Reveal>
           <h2 className="font-display max-w-3xl text-balance text-4xl font-medium leading-tight text-paper sm:text-5xl lg:text-6xl">
             {problem.title}

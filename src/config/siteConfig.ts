@@ -17,7 +17,8 @@ export const socials = {
 export const hero = {
   eyebrow: "Speaker · Innovación · Diseño estratégico",
   headline: ["INNOVACIÓN", "INCÓMODA"],
-  subheadline: "Conferencias y talleres para mover proyectos, equipos y decisiones.",
+  name: "Marcello Sisniega",
+  subheadline: "Conferencias y talleres para activar proyectos, equipos y decisiones.",
   primaryCta: "Contratar conferencia",
   secondaryCta: "Ver temas",
   image: {
@@ -36,7 +37,7 @@ export const authority = [
 ];
 
 export const problem = {
-  title: "Tu organización no necesita otra charla bonita.",
+  title: "¿Por qué lo necesitas?",
   body: "Necesita una sacudida inteligente: una forma clara de pensar, decidir y actuar cuando el mercado, la tecnología y las personas ya cambiaron.",
   pains: [
     "Equipos que hablan de innovación, pero siguen trabajando igual.",
@@ -46,25 +47,8 @@ export const problem = {
 };
 
 export const promise = {
-  title: "Conferencias que incomodan. Talleres que aterrizan.",
+  title: "Conferencias que incomodan. Metodologías que aterrizan.",
   body: "Marcello combina diseño estratégico, innovación empresarial, inteligencia artificial y facilitación creativa para mover a los equipos de la inspiración a la ejecución.",
-  pillars: [
-    {
-      number: "01",
-      title: "Provocar",
-      body: "Romper la comodidad mental que bloquea el cambio.",
-    },
-    {
-      number: "02",
-      title: "Traducir",
-      body: "Convertir conceptos complejos en herramientas simples.",
-    },
-    {
-      number: "03",
-      title: "Activar",
-      body: "Diseñar ejercicios, conversaciones y decisiones que dejan trabajo hecho.",
-    },
-  ],
 };
 
 export const topicsIntro = {
@@ -119,7 +103,7 @@ export const formats = [
 ];
 
 export const experience = {
-  title: "Una mezcla poco común: escenario, estrategia y taller.",
+  title: "Una mezcla poco común: pensamiento crítico, creatividad y acción en una misma experiencia.",
   body: "Marcello no llega únicamente a hablar de innovación. Llega a diseñar una experiencia: narrativa, participación, pensamiento crítico, herramientas visuales y ejercicios que conectan con la realidad del equipo.",
   images: [
     {

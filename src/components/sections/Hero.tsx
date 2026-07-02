@@ -97,7 +97,14 @@ export default function Hero() {
 
           <motion.p
             variants={item}
-            className="mt-8 max-w-xl text-xl font-medium text-paper sm:text-2xl"
+            className="mt-5 text-sm font-medium tracking-[0.25em] text-gold uppercase"
+          >
+            {hero.name}
+          </motion.p>
+
+          <motion.p
+            variants={item}
+            className="mt-6 max-w-xl text-xl font-medium text-paper sm:text-2xl"
           >
             {hero.subheadline}
           </motion.p>

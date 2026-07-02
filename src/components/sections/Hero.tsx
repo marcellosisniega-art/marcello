@@ -84,7 +84,7 @@ export default function Hero() {
             className="mb-6 text-xs font-medium tracking-[0.3em] text-gold uppercase"
           />
 
-          <h1 className="font-display text-[16vw] leading-[0.92] font-medium tracking-tight text-paper sm:text-[9vw] lg:text-[7.5vw]">
+          <h1 className="font-display text-[13vw] leading-[0.92] font-medium tracking-tight text-paper sm:text-[9vw] lg:text-[7.5vw]">
             <SplitText
               text={hero.headline[0]}
               as="div"

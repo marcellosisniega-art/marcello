@@ -14,6 +14,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://marcello-sisniega.vercel.app"),
   title: "Marcello Sisniega — Innovación incómoda | Speaker de innovación",
   description:
     "Conferencias y talleres para mover proyectos, equipos y decisiones. Innovación, diseño estratégico e inteligencia artificial aplicada para empresas, universidades e instituciones.",
@@ -23,6 +24,21 @@ export const metadata: Metadata = {
       "Conferencias y talleres para mover proyectos, equipos y decisiones.",
     locale: "es_GT",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Marcello Sisniega hablando con micrófono durante una conferencia",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marcello Sisniega — Innovación incómoda",
+    description:
+      "Conferencias y talleres para mover proyectos, equipos y decisiones.",
+    images: ["/og-image.jpg"],
   },
 };
 

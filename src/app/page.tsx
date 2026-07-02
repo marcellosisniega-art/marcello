@@ -10,7 +10,6 @@ import SocialProof from "@/components/sections/SocialProof";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/Footer";
 import StickyCTA from "@/components/StickyCTA";
-import CustomCursor from "@/components/ui/CustomCursor";
 
 export default function Home() {
   return (
@@ -29,7 +28,6 @@ export default function Home() {
       </main>
       <Footer />
       <StickyCTA />
-      <CustomCursor />
       <div className="grain-overlay" aria-hidden="true" />
     </>
   );

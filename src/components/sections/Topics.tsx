@@ -2,8 +2,6 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import Reveal from "@/components/ui/Reveal";
-import CountUp from "@/components/ui/CountUp";
-import GlitchText from "@/components/ui/GlitchText";
 import { topics, topicsIntro } from "@/config/siteConfig";
 
 export default function Topics() {
@@ -32,16 +30,12 @@ export default function Topics() {
                 className="group flex h-full flex-col justify-between rounded-2xl border border-line bg-ink-soft p-8 transition-colors duration-300 hover:border-gold/50"
               >
                 <div>
-                  <CountUp
-                    target={i + 1}
-                    delay={0.1 + 0.05 * i}
-                    className="font-display text-sm text-gold"
-                  />
-                  <GlitchText
-                    as="h3"
-                    text={topic.title}
-                    className="font-display mt-4 text-2xl font-medium leading-snug text-paper"
-                  />
+                  <span className="font-display text-sm text-gold">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="font-display mt-4 text-2xl font-medium leading-snug text-paper">
+                    {topic.title}
+                  </h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted">
                     {topic.subtitle}
                   </p>

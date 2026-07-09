@@ -160,7 +160,7 @@ export const experience = {
 
 export const speakerReel = {
   title: "Ver a Marcello en escena",
-  videoId: "ENlZ6GsF8-I",
+  videoSrc: "/marcello-reel.mp4",
   poster: {
     src: "/images/speaker/marcello-open-innovation.jpg",
     alt: "Marcello Sisniega facilitando el Open Innovation Program del Centro de Emprendimiento Landívar",

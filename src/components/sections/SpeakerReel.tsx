@@ -1,5 +1,5 @@
 import Reveal from "@/components/ui/Reveal";
-import LiteYouTube from "@/components/ui/LiteYouTube";
+import ReelPlayer from "@/components/ui/ReelPlayer";
 import { speakerReel } from "@/config/siteConfig";
 
 export default function SpeakerReel() {
@@ -14,8 +14,8 @@ export default function SpeakerReel() {
 
         <Reveal delay={0.1}>
           <div className="mx-auto mt-12 w-full max-w-3xl">
-            <LiteYouTube
-              videoId={speakerReel.videoId}
+            <ReelPlayer
+              src={speakerReel.videoSrc}
               title={speakerReel.title}
               poster={speakerReel.poster}
             />

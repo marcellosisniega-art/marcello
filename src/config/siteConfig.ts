@@ -160,8 +160,12 @@ export const experience = {
 
 export const speakerReel = {
   title: "Ver a Marcello en escena",
-  body: "Speaker reel próximamente.",
-  note: "Mientras tanto, agenda una llamada para conocer el enfoque de la conferencia o taller.",
+  videoId: "ENlZ6GsF8-I",
+  poster: {
+    src: "/images/speaker/marcello-open-innovation.jpg",
+    alt: "Marcello Sisniega facilitando el Open Innovation Program del Centro de Emprendimiento Landívar",
+  },
+  note: "Un vistazo al enfoque: narrativa, participación y herramientas que aterrizan.",
 };
 
 export const socialProof = {

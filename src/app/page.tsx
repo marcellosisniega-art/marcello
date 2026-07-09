@@ -17,12 +17,12 @@ export default function Home() {
       <main className="pb-20 md:pb-0">
         <Hero />
         <AuthorityStrip />
+        <SpeakerReel />
         <ProblemSection />
         <SpeakerPromise />
         <Topics />
         <Formats />
         <Experience />
-        <SpeakerReel />
         <SocialProof />
         <CTA />
       </main>
